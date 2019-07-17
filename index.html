@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Prepare a container for your calendar. -->
+    <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js">
+    </script>
+
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+
+    <!-- Prepare a container for your calendar. -->
+    <style>
+    .calendar {
+        width: 1000px;
+        font-family: Helvetica, arial;
+        border: 1px solid #DDDDDD;
+        border-radius: 3px;
+        min-height: 243px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    </style>
+    <div class="calendar">
+        <!-- Loading stuff -->
+        Loading the data.
+    </div>
+
+    <script>
+        var studentList = ['afmerino', 'Feevah', 'lathan247', 'Marsackg86', 'melvasquires', 'rellarain', 'Ruffinsan03', 'Tmorgan33', 'Twilliams19', 'vcronijohn'];
+        for(var i = 0; i < studentList.length; i ++) {
+            var div = document.createElement("div");
+            div.classList.add("calendar");
+            
+            new GitHubCalendar(div, studentList[i]);
+
+            document.body.appendChild(div);
+            
+        }
+    </script>
+</body>
+
+</html>
