@@ -36,15 +36,15 @@
     </div>
 
     <script>
-        var studentList = ['nkennaA', 'jennkait', 'Lfry706', 'Glahatte', 'amleonerd', 'damionjerrod', 'bluej3710'];
+        var studentList = ['nkennaA', 'jennkait', 'Lfry706', 'Glahatte', 'amleonerd', 'damionjerrod', 'bluej3710','glitchgirl'];
         for(var i = 0; i < studentList.length; i ++) {
             var div = document.createElement("div");
             div.classList.add("calendar");
          <!--had a space that was not needed  -->   
             new GitHubCalendar(div,studentList[i]);
-
             document.body.appendChild(div);
-            
+            new GitHubCalendar(div, studentList[i]);
+            document.body.appendChild(div);            
         }
     </script>
 </body>
